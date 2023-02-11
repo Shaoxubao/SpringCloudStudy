@@ -1,0 +1,22 @@
+# 应用名称
+spring:
+  application:
+    name: orderServer
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_study?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  type-aliases-package: com.baoge.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 8663
+eureka:
+  instance:
+    appname: order-service
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8661/eureka/
